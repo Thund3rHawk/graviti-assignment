@@ -101,7 +101,7 @@ const InputForm = () => {
     <div className="xl:w-[490px]">
       <div className="items-center sm:flex sm:justify-between">
         <div className="flex flex-col  w-[350px]">
-          <span className="text-black text-[14px] leading-[16.8px] font-[400] sm:my-2 ibm-plex-sans">
+          <span className="text-black text-[14px] leading-[16.8px] font-[400] my-2 ibm-plex-sans">
             Origin
           </span>
           <input

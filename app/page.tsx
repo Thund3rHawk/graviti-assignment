@@ -15,7 +15,7 @@ export default function Home() {
         <Image
           src={Logo}
           alt="logo"
-          height={69}
+          height={60}
           width={160}
           className="mx-16"
         />
@@ -26,7 +26,7 @@ export default function Home() {
         </h2>
         <div className="sm:flex sm:justify-center">
           <div className="sm:container flex flex-col-reverse sm:flex-row justify-between ">
-            <div className="2xl:mx-32 my-8 2xl:my-14 lg:mx-10 flex flex-col items-center sm:justify-between">
+            <div className="2xl:mx-32 my-6 2xl:my-14 lg:mx-10 flex flex-col items-center sm:justify-between">
               <InputForm />
               <OutputCard />
             </div>
