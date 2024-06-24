@@ -20,7 +20,7 @@ const TransitOption = () => {
   };
 
   return (
-    <div className="border border-slate-300/70 mb-6 sm:mb-10 h-[45px] sm:w-[250px] rounded-md bg-white">
+    <div className="border border-slate-300/70 mb-3 lg:mb-0 2xl:mb-10 h-[45px] sm:w-[250px] rounded-md bg-white">
       <Dropdown
         options={options}
         value={selectOption}

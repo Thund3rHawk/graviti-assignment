@@ -20,7 +20,7 @@ export default function Home() {
           className="mx-16"
         />
       </div>
-      <div className="sm:h-[91vh] bg-[#E9EEF2]">
+      <div className="2xl:h-[91vh] xl:h-[91vh] bg-[#E9EEF2]">
         <h2 className= "hidden sm:block text-center text-[#1B31A8] font-[400] work-sans text-[20px] leading-[24px] pt-10">
           Let&apos;s calculate the <b>distance </b>form Google maps
         </h2>
