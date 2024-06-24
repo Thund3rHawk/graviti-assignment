@@ -4,7 +4,11 @@ import React, { useEffect, useState } from "react";
 import useMap from "@/hooks/useMap";
 import Image from "next/image";
 import sourceLogo from '@/public/Source.png'
+import waypointLogo from '@/public/Waypoints.png'
+import destinationLogo from '@/public/Destination.png'
 import TransitOption from "./TransitOption";
+import plusIcon from '@/public/Add--alt.png'
+import ControlPointIcon from '@mui/icons-material/ControlPoint';
 
 const InputForm = () => {
   const [source, setSource] = useState("Kashmir");
@@ -101,17 +105,19 @@ const InputForm = () => {
     <div className="xl:w-[490px]">
       <div className="items-center sm:flex sm:justify-between">
         <div className="flex flex-col  w-[350px]">
-          <span className="text-black text-[14px] leading-[16.8px] font-[400] my-2 ibm-plex-sans">
+          <span className="hidden sm:block text-black text-[14px] leading-[16.8px] font-[400] my-2 ibm-plex-sans">
             Origin
           </span>
-          <input
-            type="text"
-            list="suggestions"
-            className="border border-slate-300/70 px-4 mb-3 lg:mb-0 2xl:mb-10 h-[35px] 2xl:h-[45px] sm:w-[250px] rounded-md relative"
-            value={source}
-            onChange={handleChange}
-          />
-            {/* <Image alt = "source logo" src = {sourceLogo}/> */}
+          <div className="border border-slate-300/70 px-2 mb-4 lg:mb-0 2xl:mb-10 h-[40px] 2xl:h-[45px] sm:w-[250px] rounded-md flex items-center bg-white">
+            <Image alt= 'source icon' src ={sourceLogo} />
+            <input
+              type="text"
+              list="suggestions"
+              className="px-2 border-none outline-none flex-grow text-lg text-gray-700 bg-transparent"
+              value={source}
+              onChange={handleChange}
+            />
+          </div>
 
           <datalist id="suggestions">
             {suggestions.map((suggestion) => (
@@ -122,24 +128,36 @@ const InputForm = () => {
             ))}
           </datalist>
 
-          <span className="text-black text-[14px] leading-[16.8px] font-[400] my-2 ibm-plex-sans">
+          <span className="hidden sm:block text-black text-[14px] leading-[16.8px] font-[400] my-2 ibm-plex-sans">
             Stop
           </span>
-          <input
-            type="text"
-            className="border border-slate-300/70 px-4 mb-3 lg:mb-0 2xl:mb-10 h-[35px] 2xl:h-[45px] sm:w-[250px] rounded-md"
-          />
-
-          <span className="text-black text-[14px] leading-[16.8px] font-[400] my-2 ibm-plex-sans">
+          <div className="border border-slate-300/70 px-2 mb-1 lg:mb-0 2xl:mb-3 h-[40px] 2xl:h-[45px] sm:w-[250px] rounded-md flex items-center bg-white">
+          <Image alt= 'waypoint icon' src ={waypointLogo} />
+            <input
+              type="text"
+              placeholder="Enter Waypoints"
+              className="px-2 border-none outline-none flex-grow text-lg text-gray-700 bg-transparent"
+              />
+          </div>
+          <div className="flex justify-end sm:w-[250px] w-full">
+            <button className="mb-2">
+              <span><ControlPointIcon fontSize="small"/>&nbsp;</span>             
+              Add another stop</button>
+          </div>
+          <span className= "hidden sm:block text-black text-[14px] leading-[16.8px] font-[400] my-2 ibm-plex-sans">
             Destination
           </span>
-          <input
-            type="text"
-            list="destSuggestions"
-            className="border border-slate-300/70 px-4 mb-3 lg:mb-0 2xl:mb-10 h-[35px] 2xl:h-[45px] sm:w-[250px] rounded-md"
-            value={destination}
-            onChange={handleChangeDest}
-          />
+          <div className="border border-slate-300/70 px-2 mb-4 lg:mb-0 2xl:mb-10 h-[40px] 2xl:h-[45px]  sm:w-[250px] rounded-md flex items-center bg-white">
+            <Image alt= 'destination icon' src ={destinationLogo} />
+
+            <input
+              type="text"
+              list="destSuggestions"
+              className="px-2 border-none outline-none flex-grow text-lg text-gray-700 bg-transparent"
+              value={destination}
+              onChange={handleChangeDest}
+            />
+          </div>
           <datalist id="destSuggestions">
             {destSuggestions.map((suggestion) => (
               <option

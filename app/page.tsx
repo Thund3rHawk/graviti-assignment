@@ -10,7 +10,7 @@ const Map = dynamic(() => import('../components/Map'), { ssr: false });
 
 export default function Home() {
   return (
-    <div className="sm:h-screen">
+    <div className="lg:h-screen">
       <div className="h-[10%] hidden sm:flex sm:items-center">
         <Image
           src={Logo}
@@ -20,7 +20,7 @@ export default function Home() {
           className="mx-16"
         />
       </div>
-      <div className="xl:h-[90%]    bg-[#E9EEF2]">
+      <div className="xl:h-[90%] bg-[#E9EEF2]">
         <h2 className= "hidden sm:block text-center text-[#1B31A8] font-[400] work-sans text-[20px] leading-[24px] pt-10">
           Let&apos;s calculate the <b>distance </b>form Google maps
         </h2>
