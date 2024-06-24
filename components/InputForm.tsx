@@ -148,6 +148,10 @@ const InputForm = () => {
               />
             ))}
           </datalist>
+
+          <span className="text-black text-[14px] leading-[16.8px] font-[400] my-2 ibm-plex-sans">
+            Transite Mode
+          </span>
           <TransitOption/>
         </div>
         <div className="text-center">
