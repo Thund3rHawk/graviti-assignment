@@ -30,7 +30,7 @@ export default function Home() {
       </div>
       <div className="sm:h-[91vh] bg-[#E9EEF2]">
         <h2 className="hidden sm:text-center text-[#1B31A8] font-[400] work-sans text-[20px] leading-[24px] pt-10">
-          Let's calculate the <b>distance </b>form Google maps
+          Let&apos;s calculate the <b>distance </b>form Google maps
         </h2>
         <div className="sm:flex sm:justify-center">
           <div className="sm:container flex flex-col-reverse sm:flex-row justify-between ">
