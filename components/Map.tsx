@@ -34,9 +34,9 @@ const destinationIcon = L.icon({
 });
 
 const Map: React.FC = () => {
-  const [route, setRoute] = useState<number[][]>();
-  const [loading, setLoading] = useState(true);
- const {setDistance, sourceCoords, destCoords} = useMap()
+    const {setDistance, sourceCoords, destCoords} = useMap()
+    const [route, setRoute] = useState<any>([sourceCoords, destCoords]);
+    const [loading, setLoading] = useState(true);
 
   const sourcePoints = sourceCoords;
   const destinationPoints = destCoords;
