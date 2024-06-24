@@ -66,7 +66,7 @@ const Map: React.FC = () => {
 
 
   if (loading) {
-    return <div className="sm:h-[511px] sm:w-[560px] border border-black w-screen h-auto aspect-square" >Loading...</div>;
+    return <div className="lg:h-[511px] lg:w-[560px] sm:h-[30px] sm:w-[30px] border border-black w-screen h-auto aspect-square" >Loading...</div>;
   }
 
  
@@ -74,7 +74,7 @@ const Map: React.FC = () => {
     <MapContainer
       center={[34.083658, 74.797368]}
       zoom={5}
-      className="sm:h-[511px] sm:w-[560px] w-screen h-auto aspect-square"
+      className="xl:h-[511px] xl:w-[560px] sm:w-[430px] w-screen h-auto aspect-square"
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
