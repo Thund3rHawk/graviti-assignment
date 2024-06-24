@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import useMap from "@/hooks/useMap";
 import Image from "next/image";
 import sourceLogo from '@/public/Source.png'
+import TransitOption from "./TransitOption";
 
 const InputForm = () => {
   const [source, setSource] = useState("Kashmir");
@@ -13,7 +14,6 @@ const InputForm = () => {
   const [sourceCoordinates, setSourceCoordinates] = useState<[number, number]>();
   const [destCoordinates, setDestCoordinates] = useState<[number, number]>();
 
-  // console.log (sourceCoordinates?.lat, sourceCoordinates?.lon);
   const { setDestinationName, setSourceName, setDestCoords, setSourceCoords } = useMap();
 
   const calculateDistance = () => {
@@ -107,7 +107,7 @@ const InputForm = () => {
           <input
             type="text"
             list="suggestions"
-            className="border border-slate-300/70 mb-3 sm:mb-10 h-[45px] sm:w-[250px] rounded-md relative"
+            className="border border-slate-300/70 px-4 mb-3 sm:mb-10 h-[45px] sm:w-[250px] rounded-md relative"
             value={source}
             onChange={handleChange}
           />
@@ -127,7 +127,7 @@ const InputForm = () => {
           </span>
           <input
             type="text"
-            className="border border-slate-300/70 mb-3 sm:mb-10 h-[45px] sm:w-[250px] rounded-md"
+            className="border border-slate-300/70 px-4 mb-3 sm:mb-10 h-[45px] sm:w-[250px] rounded-md"
           />
 
           <span className="text-black text-[14px] leading-[16.8px] font-[400] my-2 ibm-plex-sans">
@@ -136,7 +136,7 @@ const InputForm = () => {
           <input
             type="text"
             list="destSuggestions"
-            className="border border-slate-300/70 mb-6 sm:mb-10 h-[45px] sm:w-[250px] rounded-md"
+            className="border border-slate-300/70 px-4 mb-6 sm:mb-10 h-[45px] sm:w-[250px] rounded-md"
             value={destination}
             onChange={handleChangeDest}
           />
@@ -148,7 +148,7 @@ const InputForm = () => {
               />
             ))}
           </datalist>
-
+          <TransitOption/>
         </div>
         <div className="text-center">
           <button

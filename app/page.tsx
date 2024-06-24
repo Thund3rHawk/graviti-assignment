@@ -1,24 +1,16 @@
 "use client";
 import InputForm from "@/components/InputForm";
-// import Map from "@/components/Map";
 import OutputCard from "@/components/OutputCard";
 import Image from "next/image";
 import Logo from "@/public/graviti_logo.png";
 import dynamic from "next/dynamic";
-
-const hardcodedOrigin = { lat: 37.7749, lng: -122.4194 }; // San Francisco, CA
-const hardcodedDestination = { lat: 34.0522, lng: -118.2437 }; // Los Angeles, CA
-const hardcodedWaypoints = [
-  { location: { lat: 36.7783, lng: -119.4179 }, stopover: true }, // Fresno, CA
-  { location: { lat: 35.3733, lng: -119.0187 }, stopover: true }, // Bakersfield, CA
-];
-
 const Map = dynamic(() => import('../components/Map'), { ssr: false });
+
+
 
 export default function Home() {
   return (
     <>
-    {/* Navbar */}
       <div className="h-[9vh] hidden sm:flex sm:items-center">
         <Image
           src={Logo}

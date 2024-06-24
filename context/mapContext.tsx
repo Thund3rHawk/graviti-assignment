@@ -12,6 +12,8 @@ interface mapContextType {
     setSourceCoords: React.Dispatch<SetStateAction<([number, number])>>
     destCoords:( [number, number]),
     setDestCoords: React.Dispatch<SetStateAction<([number, number])>>
+    driveMode: string,
+    setDriveMode: React.Dispatch<SetStateAction<string>>,
 }
 
 export const mapContext = createContext<mapContextType>({
@@ -25,6 +27,8 @@ export const mapContext = createContext<mapContextType>({
     setSourceCoords: ()=>{},
     destCoords: [0,0],
     setDestCoords: ()=>{},
+    driveMode: "drive",
+    setDriveMode: ()=>{},
 })
 
 const mapProvider:React.FC<{children: React.ReactNode}> = ({children}) => {
@@ -33,9 +37,10 @@ const mapProvider:React.FC<{children: React.ReactNode}> = ({children}) => {
     const [destination, setDestinationName] = useState('Mumbai')
     const [sourceCoords, setSourceCoords] = useState<[number, number]>([34.083658, 74.797368])
     const [destCoords, setDestCoords] = useState <[number, number]>([19.0785451, 72.878176])
+    const [driveMode, setDriveMode] = useState ("drive")
 
   return (
-    <mapContext.Provider value={{distance, setDistance, source, setSourceName, destination, setDestinationName, destCoords, setDestCoords, sourceCoords, setSourceCoords}}>
+    <mapContext.Provider value={{distance, setDistance, source, setSourceName, destination, setDestinationName, destCoords, setDestCoords, sourceCoords, setSourceCoords, driveMode, setDriveMode}}>
         {children}
     </mapContext.Provider>
   )

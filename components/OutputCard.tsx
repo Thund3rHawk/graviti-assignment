@@ -2,10 +2,6 @@
 import React from 'react'
 import useMap  from '@/hooks/useMap';
 
-// const source = "Delhi";
-// const destination = "Mumbai"
-// const distance = '1090' 
-
 const OutputCard = () => {
   const {distance, source, destination} = useMap();
 
