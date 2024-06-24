@@ -107,7 +107,7 @@ const InputForm = () => {
           <input
             type="text"
             list="suggestions"
-            className="border border-slate-300/70 px-4 mb-3 sm:mb-5 xl:mb-10 h-[45px] sm:w-[250px] rounded-md relative"
+            className="border border-slate-300/70 px-4 mb-3 lg:mb-5 2xl:mb-10 h-[35px] 2xl:h-[45px] sm:w-[250px] rounded-md relative"
             value={source}
             onChange={handleChange}
           />
@@ -127,7 +127,7 @@ const InputForm = () => {
           </span>
           <input
             type="text"
-            className="border border-slate-300/70 px-4 mb-3 sm:mb-5 xl:mb-10 h-[45px] sm:w-[250px] rounded-md"
+            className="border border-slate-300/70 px-4 mb-3 lg:mb-5 2xl:mb-10 h-[35px] 2xl:h-[45px] sm:w-[250px] rounded-md"
           />
 
           <span className="text-black text-[14px] leading-[16.8px] font-[400] my-2 ibm-plex-sans">
@@ -136,7 +136,7 @@ const InputForm = () => {
           <input
             type="text"
             list="destSuggestions"
-            className="border border-slate-300/70 px-4 mb-6 sm:mb-5 xl:mb-10 h-[45px] sm:w-[250px] rounded-md"
+            className="border border-slate-300/70 px-4 mb-3 lg:mb-5 2xl:mb-10 h-[35px] 2xl:h-[45px] sm:w-[250px] rounded-md"
             value={destination}
             onChange={handleChangeDest}
           />

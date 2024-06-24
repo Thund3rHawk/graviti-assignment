@@ -74,7 +74,7 @@ const Map: React.FC = () => {
     <MapContainer
       center={[34.083658, 74.797368]}
       zoom={5}
-      className="xl:h-[511px] xl:w-[560px] sm:w-[430px] w-screen h-auto aspect-square"
+      className="2xl:h-[511px] 2xl:w-[560px] sm:w-[430px] lg:w-[400px] w-screen h-auto aspect-square"
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

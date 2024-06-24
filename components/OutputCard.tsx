@@ -6,7 +6,7 @@ const OutputCard = () => {
   const {distance, source, destination} = useMap();
 
   return (
-    <div className='distance h-[158px] w-[351px] sm:w-[490px] border border-slate-300/70 rounded-lg overflow-hidden'>
+    <div className='distance h-[158px] w-[351px] xl:w-[490px] border border-slate-300/70 rounded-lg overflow-hidden'>
         <div className='bg-white flex justify-between h-[50%] items-center px-5 '>
             <h2 className='text-[#1E2A32] font-[700] text-[20px] ibm-plex-sans'>Distance</h2>
 
