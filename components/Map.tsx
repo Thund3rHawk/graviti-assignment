@@ -66,7 +66,7 @@ const Map: React.FC = () => {
 
 
   if (loading) {
-    return <div className="lg:h-[511px] lg:w-[560px] sm:h-[30px] sm:w-[30px] border border-black w-screen h-auto aspect-square" >Loading...</div>;
+    return <div className="2xl:h-[511px] 2xl:w-[560px] sm:w-[430px] lg:w-[400px] border border-black w-screen h-auto aspect-square" >Loading...</div>;
   }
 
  
