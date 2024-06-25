@@ -7,7 +7,6 @@ import sourceLogo from '@/public/Source.png'
 import waypointLogo from '@/public/Waypoints.png'
 import destinationLogo from '@/public/Destination.png'
 import TransitOption from "./TransitOption";
-import plusIcon from '@/public/Add--alt.png'
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 
 const InputForm = () => {
@@ -109,7 +108,7 @@ const InputForm = () => {
             Origin
           </span>
           <div className="border border-slate-300/70 px-2 mb-4 lg:mb-0 2xl:mb-10 h-[40px] 2xl:h-[45px] sm:w-[250px] rounded-md flex items-center bg-white">
-            <Image alt= 'source icon' src ={sourceLogo} />
+            <Image alt= 'source icon' src ={sourceLogo} className="border border-black rounded-full"/>
             <input
               type="text"
               list="suggestions"
